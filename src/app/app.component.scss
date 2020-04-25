@@ -1,0 +1,21 @@
+@import "./src/scss/variables";
+
+.app-header {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+  background: $colorPrimary;
+
+  h1 {
+    .app-title {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  img {
+    min-width: 250px;
+    max-width: 25vw;
+    height: auto;
+  }
+}

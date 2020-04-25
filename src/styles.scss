@@ -1,0 +1,102 @@
+@import "scss/variables";
+
+
+@font-face {
+  font-family: Roboto;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #D2D2D2;
+}
+
+.input-group {
+  input.form-control {
+    background-color: $colorBackground;
+    border-color: $colorBorder;
+    color: $colorText;
+  }
+
+  input.form-control:focus {
+    --webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  div.input-group-append {
+    span.input-group-text {
+      background-color: $colorBackground;
+      border-color: $colorBorder;
+      color: $colorText;
+    }
+  }
+}
+
+ul.pagination {
+  li.page-item {
+
+    a.page-link {
+      background-color: $colorBackground;
+      border-color: $colorBorder;
+      color: $colorText;
+    }
+
+    a.page-link:focus {
+      --webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+
+  li.page-item.active {
+    a.page-link {
+      background-color: #D2D2D2;
+      border-color: $colorBorder;
+      color: black;
+      font-weight: bold;
+    }
+
+    a.page-link:focus {
+      --webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.card {
+  background-color: $colorBackground;
+  border-color: $colorBorder;
+  color: white;
+}
+
+ul.list-group {
+  li {
+    background-color: #CDD1D5;
+    border-color: $colorBorder;
+    color: $colorText;
+
+    a {
+      color: #D4AF37;
+    }
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.float-right {
+  float: right;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.small-margin-left {
+  margin-left: 5px;
+}

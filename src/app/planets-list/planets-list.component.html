@@ -1,0 +1,61 @@
+<div class="input-group search-bar">
+  <input type="text" class="form-control" placeholder="Search planet..." aria-label="Search planet..."
+         [(ngModel)]="searchedPlanet"
+         (keydown.enter)="searchPlanet(true)">
+  <div class="input-group-append">
+    <span class="input-group-text clickable" id="search-icon" (click)="searchPlanet(true) ">
+      <a class="name-search"><i class="fa fa-search"></i></a>
+    </span>
+  </div>
+</div>
+
+<div class="table-responsive table-header">
+  <h4>List of Planets:</h4>
+  <div *ngIf="errorMessage" class="alert-warning alert-message">
+    <strong>Warning!</strong> {{errorMessage}}
+  </div>
+  <div *ngIf="loading;">
+    <app-loading [message]="loadingMessage"></app-loading>
+  </div>
+  <table class="table planets-table-list">
+    <tbody>
+    <ng-container *ngFor="let planet of listOfPlanets">
+      <tr>
+        <td>
+          <button class="see-details" [routerLink]="['/planet/' + planet.id]">See details</button>
+          <p class="name">{{planet.name}}</p>
+        </td>
+      </tr>
+    </ng-container>
+
+    <tr *ngIf="!loading && !errorMessage && listOfPlanets.length == 0">
+      <td colspan="3">
+        <ng-container *ngIf="searchActive && !errorMessage">
+          No records found...
+        </ng-container>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="" *ngIf="totalPlanets > 0">
+  <div class="planets-table-per-page-picker">
+    <span class="possible-number-of-planets-per-page clickable"
+          [ngClass]="{'current-number-of-planets-per-page' :planetAmount == planetsPerPage}"
+          *ngFor="let planetAmount of availablePlanetsPerPage"
+          (click)="changePlanetsAmountOnPage(planetAmount)">
+      {{ planetAmount }}
+    </span>
+  </div>
+
+  <ngb-pagination class="planets-table-pagination"
+                  [collectionSize]="totalPlanets"
+                  [pageSize]="planetsPerPage"
+                  [maxSize]="3"
+                  [rotate]="true"
+                  [boundaryLinks]="true"
+                  [(page)]="currentPage"
+                  (pageChange)="changePage($event)"
+  ></ngb-pagination>
+</div>

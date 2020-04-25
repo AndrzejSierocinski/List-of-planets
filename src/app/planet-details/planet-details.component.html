@@ -1,0 +1,61 @@
+<div class="planet-detail">
+  <button class="back">
+    <a class="app-back" routerLink="/"><i class="fa fa-arrow-circle-left fa-2x float-left top clickable"></i> Back To PlanetDetails List</a>
+  </button>
+  <div *ngIf="loading;">
+    <app-loading [message]="loadingMessage"></app-loading>
+  </div>
+</div>
+
+<br>
+<br>
+<div class="card planet-details-container">
+  <div *ngIf="errorMessage" class="alert alert-warning">
+    <strong>Warning!</strong> {{errorMessage}}
+  </div>
+  <ng-container *ngIf="currentPlanet">
+    <ul class="list-group list-group-flush list-details">
+      <li class="list-group-item">
+        <h2 class="card-title no-margin-bottom">{{ currentPlanet.name }}</h2>
+      </li>
+      <li class="list-group-item">
+        <strong>Rotation period:</strong> {{ currentPlanet.rotationPeriod }}
+      </li>
+      <li class="list-group-item">
+        <strong>Diameter:</strong> {{ currentPlanet.diameter }}
+      </li>
+      <li class="list-group-item">
+        <strong>Climate:</strong> {{ currentPlanet.climate }}
+      </li>
+      <li class="list-group-item">
+        <strong>Gravity:</strong> {{ currentPlanet.gravity }}
+      </li>
+      <li class="list-group-item">
+        <strong>Terrain:</strong> {{ currentPlanet.terrain }}
+      </li>
+      <li class="list-group-item">
+        <strong>Surface water:</strong> {{ currentPlanet.surfaceWater }}
+      </li>
+      <li class="list-group-item">
+        <strong>Population:</strong> {{ currentPlanet.population }}
+      </li>
+      <li class="list-group-item" *ngIf="currentPlanet.residentsUrls">
+        <strong>Residents:</strong>
+        <div *ngFor="let residentUrl of currentPlanet.residentsUrls">
+          {{residentUrl}}
+        </div>
+      </li>
+      <li class="list-group-item" *ngIf="currentPlanet.filmsUrls">
+        <strong>Films:</strong>
+        <div *ngFor="let filmUrl of currentPlanet.filmsUrls">
+          <div>
+            {{filmUrl}}
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <strong>URL:</strong> {{ currentPlanet.urlLink }}
+      </li>
+    </ul>
+  </ng-container>
+</div>
