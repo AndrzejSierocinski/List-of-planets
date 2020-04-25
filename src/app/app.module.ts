@@ -1,7 +1,7 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 import {RouterModule} from '@angular/router';
 import {PlanetsListComponent} from './planets-list/planets-list.component';
 import {PlanetDetailsComponent} from './planet-details/planet-details.component';
@@ -11,7 +11,11 @@ import {NgbDropdownModule, NgbPaginationModule} from '@ng-bootstrap/ng-bootstrap
 import {routing} from './app.routes';
 import {HttpClientModule} from '@angular/common/http';
 import {LoadingComponent} from './shared/loading.component';
-import { AppNotFoundComponent } from './app-not-found/app-not-found.component';
+import {AppNotFoundComponent} from './app-not-found/app-not-found.component';
+import {PeopleDetailsComponent} from './people/people-details/people-details.component';
+import {PeopleService} from './shared/services/people.service';
+import {FilmsService} from './shared/services/films.service';
+import {FilmDetailsComponent} from './films/film-details/film-details.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,9 @@ import { AppNotFoundComponent } from './app-not-found/app-not-found.component';
     PlanetsListComponent,
     PlanetDetailsComponent,
     LoadingComponent,
-    AppNotFoundComponent
+    AppNotFoundComponent,
+    PeopleDetailsComponent,
+    FilmDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +36,11 @@ import { AppNotFoundComponent } from './app-not-found/app-not-found.component';
     routing,
     NgbDropdownModule
   ],
-  providers: [PlanetsService],
+  providers: [
+    PlanetsService,
+    PeopleService,
+    FilmsService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

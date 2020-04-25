@@ -28,7 +28,6 @@ export class PlanetDetailsComponent extends PlanetComponent implements OnInit {
     });
   }
 
-
   protected getPlanetDetails() {
     this.showLoading();
     this.planetsService.getPlanetByID(this.planetId).subscribe(
@@ -41,5 +40,13 @@ export class PlanetDetailsComponent extends PlanetComponent implements OnInit {
         this.errorMessage = error.message;
         console.log(error);
       });
+  }
+
+  public getPlanetImage = (url: string): string => {
+    const planetId = url.slice(0, -1).split('/').pop();
+    return `http://starwars-visualguide.com/assets/img/planets/${planetId}.jpg`;
+  }
+  public pictNotLoading(event) {
+    event.target.src = 'http://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Death_star1.png/220px-Death_star1.png';
   }
 }

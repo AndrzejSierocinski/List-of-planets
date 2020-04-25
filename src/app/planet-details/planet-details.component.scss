@@ -40,6 +40,9 @@
     .list-group-item {
       background: rgba(226, 230, 234, 0.79);
       border-radius: 11px;
+      .planet-image {
+        width: 150px;
+      }
     }
   }
 }

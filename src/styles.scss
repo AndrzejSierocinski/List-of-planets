@@ -16,6 +16,32 @@ body {
   background-color: #D2D2D2;
 }
 
+a:link {
+  color: blue;
+  font-style: italic;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: $colorText;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  //color: darkblue;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
 .input-group {
   input.form-control {
     background-color: $colorBackground;
@@ -40,10 +66,12 @@ body {
 ul.pagination {
   li.page-item {
 
+
     a.page-link {
       background-color: $colorBackground;
       border-color: $colorBorder;
       color: $colorText;
+      font-style: normal !important;
     }
 
     a.page-link:focus {

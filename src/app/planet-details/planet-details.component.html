@@ -17,7 +17,10 @@
     <ul class="list-group list-group-flush list-details">
       <li class="list-group-item">
         <h2 class="card-title no-margin-bottom">{{ currentPlanet.name }}</h2>
+        <img src="{{getPlanetImage(currentPlanet.urlLink)}}"
+             (error)="pictNotLoading($event)" class="planet-image" alt="Planet Image">
       </li>
+
       <li class="list-group-item">
         <strong>Rotation period:</strong> {{ currentPlanet.rotationPeriod }}
       </li>
@@ -40,21 +43,20 @@
         <strong>Population:</strong> {{ currentPlanet.population }}
       </li>
       <li class="list-group-item" *ngIf="currentPlanet.residentsUrls">
-        <strong>Residents:</strong>
+        <strong>Residents:</strong> {{ currentPlanet.residentsUrls.length }}
         <div *ngFor="let residentUrl of currentPlanet.residentsUrls">
-          {{residentUrl}}
+          <app-people-details [peopleUrl]="residentUrl"></app-people-details>
         </div>
       </li>
       <li class="list-group-item" *ngIf="currentPlanet.filmsUrls">
-        <strong>Films:</strong>
+        <strong>Films:</strong> {{currentPlanet.filmsUrls.length}}
         <div *ngFor="let filmUrl of currentPlanet.filmsUrls">
-          <div>
-            {{filmUrl}}
-          </div>
+          <app-film-details [filmUrl]="filmUrl"></app-film-details>
         </div>
       </li>
       <li class="list-group-item">
-        <strong>URL:</strong> {{ currentPlanet.urlLink }}
+        <strong>Planet API URL:</strong>
+        <a href="{{currentPlanet.urlLink }}" target="_blank" style="color:blue"> {{currentPlanet.urlLink}}</a>
       </li>
     </ul>
   </ng-container>
