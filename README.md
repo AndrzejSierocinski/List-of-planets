@@ -26,7 +26,7 @@ git clone https://github.com/AndrzejSierocinski/List-of-planets.git
 cd List-of-planets
 npm install
 ```
-
+ 
 ### Run development server
 
 ```bash
@@ -34,3 +34,12 @@ ng serve
 ```
 
 Runs a webpack-development server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Technology Stacks
+  - Angular 8.2.13
+  - Bootstrap 4.4.1
+  - HTML5
+  - SCSS
+  - Typescript 3.5.3
+  - ng-bootstrap 5.3.0
+ 
