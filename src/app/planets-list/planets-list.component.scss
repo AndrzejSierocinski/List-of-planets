@@ -4,6 +4,17 @@
   max-width: 270px;
   margin-bottom: -41px;
   float: right;
+  .clearSearchResults {
+    position: absolute;
+    right: 10px;
+    font-size: 18px;
+    top: 7px;
+    cursor: pointer;
+
+    &:hover {
+      color: #1c4192;
+    }
+  }
 }
 
 .planets-table-per-page-picker {
