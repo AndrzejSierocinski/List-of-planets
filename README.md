@@ -1,27 +1,36 @@
-# ListOfPlanets
+# List of planets
+Check out this project online at http://list-of-planets.s3-website.eu-central-1.amazonaws.com/
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
+Application presents a list of planets. Data come from an
+external server. I used this service - https://swapi.py4e.com/api/planets/. 
+The application has a search bar located at the top of the list. A user is able
+to type a string phrase into the search input, and the planet list is filtered by their
+names.
+The list contain pagination with an option to navigate to different
+pages in addition to another option in order to select the page size (possible values 5, 10, 25, 100).
+A user also have an option to view the details of their selected planet. Clicking on a
+planet navigate the user to a page where the details of the planet are presented. At
+the top of that page is a ‘back’ button that navigates back to the list.
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Clone repository
 
-## Code scaffolding
+```bash
+git clone https://github.com/AndrzejSierocinski/List-of-planets.git
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Install NPM packages
 
-## Build
+```bash
+cd List-of-planets
+npm install
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Run development server
 
-## Running unit tests
+```bash
+ng serve
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Runs a webpack-development server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
