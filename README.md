@@ -26,7 +26,7 @@ git clone https://github.com/AndrzejSierocinski/List-of-planets.git
 cd List-of-planets
 npm install
 ```
-
+ 
 ### Run development server
 
 ```bash
