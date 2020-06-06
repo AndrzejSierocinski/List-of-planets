@@ -1,5 +1,5 @@
 # List of planets
-Check out this project online at http://list-of-planets.s3-website.eu-central-1.amazonaws.com/
+Check out this project online at http://listofplanets.s3-website.eu-west-3.amazonaws.com/
 
 Application presents a list of planets. Data come from an
 external server. I used this service - https://swapi.py4e.com/api/planets/. 
@@ -11,6 +11,14 @@ pages in addition to another option in order to select the page size (possible v
 A user also have an option to view the details of their selected planet. Clicking on a
 planet navigate the user to a page where the details of the planet are presented. At
 the top of that page is a ‘back’ button that navigates back to the list.
+
+## Preview
+
+![alt text](https://github.com/AndrzejSierocinski/List-of-planets/blob/master/src/assets/images/main.png?raw=true)
+![alt text](https://github.com/AndrzejSierocinski/List-of-planets/blob/master/src/assets/images/pagination&page-size.png?raw=true)
+![alt text](https://github.com/AndrzejSierocinski/List-of-planets/blob/master/src/assets/images/details.png?raw=true)
+![alt text](https://github.com/AndrzejSierocinski/List-of-planets/blob/master/src/assets/images/not-found.png?raw=true)
+
 
 ## Installation
 
