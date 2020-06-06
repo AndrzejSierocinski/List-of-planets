@@ -17,6 +17,7 @@ the top of that page is a ‘back’ button that navigates back to the list.
 ![alt text](https://github.com/AndrzejSierocinski/List-of-planets/blob/master/src/assets/images/main.png?raw=true)
 ![alt text](https://github.com/AndrzejSierocinski/List-of-planets/blob/master/src/assets/images/pagination&page-size.png?raw=true)
 ![alt text](https://github.com/AndrzejSierocinski/List-of-planets/blob/master/src/assets/images/details.png?raw=true)
+![alt text](https://github.com/AndrzejSierocinski/List-of-planets/blob/master/src/assets/images/search.png?raw=true)
 ![alt text](https://github.com/AndrzejSierocinski/List-of-planets/blob/master/src/assets/images/not-found.png?raw=true)
 
 
