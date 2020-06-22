@@ -1,5 +1,5 @@
 # List of planets
-Check out this project online at http://listofplanets.s3-website.eu-west-3.amazonaws.com/
+Check out this project online at http://list-of-planets.s3-website.eu-central-1.amazonaws.com/
 
 Application presents a list of planets. Data come from an
 external server. I used this service - https://swapi.py4e.com/api/planets/. 
